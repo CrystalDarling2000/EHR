@@ -4,6 +4,10 @@ Simulator and experiments for the project report *Consent-Bound Secure Transmiss
 Electronic Health Records over a Hybrid Blockchain Ledger with Sensitivity-Aware Adaptive
 Anchoring*.
 
+**Live demo: https://ehrdemo.vercel.app/**
+
+![HyL-EHR demo console walk-through](docs/demo.gif)
+
 Everything runs on one machine. No real patient data is used; records are random bytes inside
 a FHIR-style envelope.
 
