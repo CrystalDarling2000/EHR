@@ -1,0 +1,22 @@
+== HyL-EHR prototype demo ==
+consortium: 4 validators, f = 1, quorum = 3
+patient   d21506107e69552664f65be18f4c567d
+custodian 420dd48536d14efa293018ca01216a12 (Hospital A)
+requester 887c81e8129832b306ae0a3c198f3375 (Hospital B)
+
+[1] RECORD_ADD  65536 B encrypted off-chain, 1 chunk(s)
+    CID (Merkle root of ciphertext) 775a4e479770f8866c12d793174cf6bb...
+    private block #1, 3 validator signatures, class = sensitive
+[2] Hospital B asks before any consent  ->  REFUSED (no active consent on ledger)
+[3] CONSENT_GRANT by patient, scope = lab-report, 30 days (block #2)
+    consent digest v1 abcbac9f7afc9dc9579669a0f267c87d...
+[4] CBKD transfer  ->  delivered, plaintext matches: True
+    ACCESS_LOG tx c831ac418476ea1ac670ced6... in block #3
+[5] CONSENT_REVOKE by patient (block #4, class = critical)
+    SAAA trigger = 'critical'  ->  public anchor, epoch 1, private blocks 0..4
+    ledger root  c85abcf783ca2b58d710f9d40979011e...
+    consent root f0fe0f50502d098f3d6bc72170b33179...
+[6] Hospital B asks again after revocation  ->  REFUSED (no active consent on ledger)
+[7] Dual-ledger proof for the revocation: 0 + 3 hashes, verified against public chain: True
+
+private chain height 5, public anchors 1

@@ -1,0 +1,149 @@
+[
+ {
+  "id": "T01",
+  "attack": "Honest transfer with live consent (control)",
+  "layer": "transmission",
+  "outcome": "delivered",
+  "pass": true
+ },
+ {
+  "id": "T02",
+  "attack": "Request with no consent on the ledger",
+  "layer": "consent",
+  "outcome": "TransferError: no active consent on ledger",
+  "pass": true
+ },
+ {
+  "id": "T03",
+  "attack": "Request after the patient revoked consent",
+  "layer": "consent",
+  "outcome": "TransferError: no active consent on ledger",
+  "pass": true
+ },
+ {
+  "id": "T04",
+  "attack": "Request outside the consented scope",
+  "layer": "consent",
+  "outcome": "TransferError: no active consent on ledger",
+  "pass": true
+ },
+ {
+  "id": "T05",
+  "attack": "Request after the consent expired",
+  "layer": "consent",
+  "outcome": "TransferError: no active consent on ledger",
+  "pass": true
+ },
+ {
+  "id": "T06",
+  "attack": "Sender cut off from the consortium misses an anchored revocation",
+  "layer": "CBKD + anchoring",
+  "outcome": "TransferError: stale replica: behind the public anchor",
+  "pass": true
+ },
+ {
+  "id": "T07",
+  "attack": "Same partition, sender's freshness check switched off",
+  "layer": "CBKD",
+  "outcome": "TransferError: key mismatch: session keys differ",
+  "pass": true
+ },
+ {
+  "id": "T08",
+  "attack": "Consent re-scoped in a block not yet anchored; receiver lags one block",
+  "layer": "CBKD",
+  "outcome": "TransferError: key mismatch: session keys differ",
+  "pass": true
+ },
+ {
+  "id": "T09",
+  "attack": "Man-in-the-middle swaps the sender's ephemeral key",
+  "layer": "transmission",
+  "outcome": "TransferError: sender signature invalid",
+  "pass": true
+ },
+ {
+  "id": "T10",
+  "attack": "Request signed by an unregistered identity",
+  "layer": "transmission",
+  "outcome": "TransferError: requester not registered or bad signature",
+  "pass": true
+ },
+ {
+  "id": "T11",
+  "attack": "Wrapped data key replayed into a new session",
+  "layer": "transmission",
+  "outcome": "TransferError: key mismatch: session keys differ",
+  "pass": true
+ },
+ {
+  "id": "T12",
+  "attack": "One bit flipped in a stored ciphertext chunk",
+  "layer": "storage",
+  "outcome": "TransferError: ciphertext does not match on-chain CID",
+  "pass": true
+ },
+ {
+  "id": "T13",
+  "attack": "Chunks of a multi-chunk record reordered",
+  "layer": "storage",
+  "outcome": "TransferError: ciphertext does not match on-chain CID",
+  "pass": true
+ },
+ {
+  "id": "T14",
+  "attack": "Transaction with a forged signature",
+  "layer": "private ledger",
+  "outcome": "LedgerError: bad signature",
+  "pass": true
+ },
+ {
+  "id": "T15",
+  "attack": "Committed transaction submitted a second time",
+  "layer": "private ledger",
+  "outcome": "LedgerError: replayed transaction",
+  "pass": true
+ },
+ {
+  "id": "T16",
+  "attack": "Provider tries to grant consent on the patient's behalf",
+  "layer": "private ledger",
+  "outcome": "LedgerError: only the patient changes consent",
+  "pass": true
+ },
+ {
+  "id": "T17",
+  "attack": "Colluding quorum rewrites an ANCHORED block to erase a revocation",
+  "layer": "hybrid anchoring",
+  "outcome": "quorum signatures valid, public proof rejected",
+  "pass": true
+ },
+ {
+  "id": "T18",
+  "attack": "Control: the same rewrite on a block that is NOT yet anchored",
+  "layer": "hybrid anchoring",
+  "outcome": "quorum signatures valid, no public evidence yet (exposure window)",
+  "pass": true
+ },
+ {
+  "id": "T19",
+  "attack": "Patient proves a revocation against the anchored consent root",
+  "layer": "hybrid anchoring",
+  "outcome": "revoked entry proven, live entry rejected",
+  "pass": true
+ },
+ {
+  "id": "T20",
+  "attack": "Dual-ledger proof presented for a transaction that was never committed",
+  "layer": "hybrid anchoring",
+  "outcome": "proof rejected",
+  "pass": true
+ },
+ {
+  "id": "T21",
+  "attack": "Break-glass access by a clinician without the emergency role",
+  "layer": "private ledger",
+  "outcome": "LedgerError: not an emergency-authorised clinician",
+  "pass": true
+ }
+]

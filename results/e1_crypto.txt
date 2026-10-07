@@ -1,0 +1,20 @@
+operation                                        time per op
+Ed25519 sign                                         38.6 us
+Ed25519 verify                                      121.1 us
+X25519 key generation                                39.1 us
+X25519 shared secret                                 40.7 us
+HKDF-SHA256 (64-byte output)                          4.2 us
+SHA-256 field hash H() (5 fields)                     1.7 us
+Merkle root, 1,024 leaves                          1009.3 us
+RSA-2048 PSS sign                                   395.9 us
+RSA-2048 PSS verify                                  28.9 us
+RSA-2048 OAEP encrypt                                27.1 us
+RSA-2048 OAEP decrypt                               386.4 us
+RSA-2048 key generation                           44822.4 us
+
+bulk operation (32 MiB)                           throughput
+SHA-256                                            1278 MiB/s
+AES-256-GCM encrypt (single call)                  1762 MiB/s
+Record encrypt, 256 KiB chunks + Merkle CID         624 MiB/s
+Record decrypt, 256 KiB chunks                      766 MiB/s
+Merkle CID check over ciphertext                   1160 MiB/s

@@ -1,0 +1,9 @@
+solc 0.8.26+commit.8a97fa7a.Emscripten.clang | runtime+init bytecode 2666 bytes
+deployment gas          : 616805
+anchor()        gas     : 118298, 104293, 104293, 104281  (first call initialises storage)
+anchorCompact() gas     : 71277, 37372, 37372, 37360
+verifyBlock      1 blocks/epoch, path  0 -> gas 25593, valid accepted: true, forged accepted: false
+verifyBlock     16 blocks/epoch, path  4 -> gas 30799, valid accepted: true, forged accepted: false
+verifyBlock    128 blocks/epoch, path  7 -> gas 34713, valid accepted: true, forged accepted: false
+verifyBlock   1024 blocks/epoch, path 10 -> gas 38611, valid accepted: true, forged accepted: false
+non-contiguous anchor rejected: true

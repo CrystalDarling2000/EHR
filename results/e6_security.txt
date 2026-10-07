@@ -1,0 +1,44 @@
+T01  PASS  [transmission] Honest transfer with live consent (control)
+           -> delivered
+T02  PASS  [consent] Request with no consent on the ledger
+           -> TransferError: no active consent on ledger
+T03  PASS  [consent] Request after the patient revoked consent
+           -> TransferError: no active consent on ledger
+T04  PASS  [consent] Request outside the consented scope
+           -> TransferError: no active consent on ledger
+T05  PASS  [consent] Request after the consent expired
+           -> TransferError: no active consent on ledger
+T06  PASS  [CBKD + anchoring] Sender cut off from the consortium misses an anchored revocation
+           -> TransferError: stale replica: behind the public anchor
+T07  PASS  [CBKD] Same partition, sender's freshness check switched off
+           -> TransferError: key mismatch: session keys differ
+T08  PASS  [CBKD] Consent re-scoped in a block not yet anchored; receiver lags one block
+           -> TransferError: key mismatch: session keys differ
+T09  PASS  [transmission] Man-in-the-middle swaps the sender's ephemeral key
+           -> TransferError: sender signature invalid
+T10  PASS  [transmission] Request signed by an unregistered identity
+           -> TransferError: requester not registered or bad signature
+T11  PASS  [transmission] Wrapped data key replayed into a new session
+           -> TransferError: key mismatch: session keys differ
+T12  PASS  [storage] One bit flipped in a stored ciphertext chunk
+           -> TransferError: ciphertext does not match on-chain CID
+T13  PASS  [storage] Chunks of a multi-chunk record reordered
+           -> TransferError: ciphertext does not match on-chain CID
+T14  PASS  [private ledger] Transaction with a forged signature
+           -> LedgerError: bad signature
+T15  PASS  [private ledger] Committed transaction submitted a second time
+           -> LedgerError: replayed transaction
+T16  PASS  [private ledger] Provider tries to grant consent on the patient's behalf
+           -> LedgerError: only the patient changes consent
+T17  PASS  [hybrid anchoring] Colluding quorum rewrites an ANCHORED block to erase a revocation
+           -> quorum signatures valid, public proof rejected
+T18  PASS  [hybrid anchoring] Control: the same rewrite on a block that is NOT yet anchored
+           -> quorum signatures valid, no public evidence yet (exposure window)
+T19  PASS  [hybrid anchoring] Patient proves a revocation against the anchored consent root
+           -> revoked entry proven, live entry rejected
+T20  PASS  [hybrid anchoring] Dual-ledger proof presented for a transaction that was never committed
+           -> proof rejected
+T21  PASS  [private ledger] Break-glass access by a clinician without the emergency role
+           -> LedgerError: not an emergency-authorised clinician
+
+21/21 security tests passed

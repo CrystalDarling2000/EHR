@@ -1,0 +1,19 @@
+CBKD transfer, median of 15 runs (ms)
+     size chunks  request  respond verifyCID  decrypt  receipt    total   MiB/s
+      4KB      1    0.096    0.319     0.008    0.303    0.375    1.118     3.5
+     64KB      1    0.102    0.327     0.056    0.293    0.351    1.152    54.3
+   1024KB      4    0.125    0.352     0.855    0.809    0.360    2.533   394.8
+   8192KB     32    0.150    0.369     6.825    4.812    0.390   12.527   638.6
+  32768KB    128    0.223    0.420    27.812   37.993    0.409   66.845   478.7
+  65536KB    256    0.239    0.447    55.342   83.045    0.423  139.801   457.8
+
+Scheme comparison: total time (ms) and sender-side time (ms)
+     size      CBKD  ECDH-only   RSA-env  Re-encrypt  | snd CBKD  snd Re-enc
+      4KB     1.118      0.577     1.717       0.563       0.695       0.199
+     64KB     1.152      0.612     1.821       0.583       0.695       0.212
+   1024KB     2.533      1.692     2.930       1.784       0.739       0.909
+   8192KB    12.527      9.500    10.877      11.959       0.773       6.802
+  32768KB    66.845     66.678    68.345      83.086       0.826      59.873
+  65536KB   139.801    141.661   142.452     175.186       0.880     127.958
+
+Key establishment only (ms): CBKD 0.873 | ECDH-only 0.578 | RSA envelope 1.880

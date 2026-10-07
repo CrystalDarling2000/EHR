@@ -1,0 +1,74 @@
+{
+ "per_op_us": [
+  [
+   "Ed25519 sign",
+   38.60882950004907
+  ],
+  [
+   "Ed25519 verify",
+   121.0719965000635
+  ],
+  [
+   "X25519 key generation",
+   39.062930999989476
+  ],
+  [
+   "X25519 shared secret",
+   40.73930649997237
+  ],
+  [
+   "HKDF-SHA256 (64-byte output)",
+   4.2249009999295595
+  ],
+  [
+   "SHA-256 field hash H() (5 fields)",
+   1.6738796000026923
+  ],
+  [
+   "Merkle root, 1,024 leaves",
+   1009.3037499927959
+  ],
+  [
+   "RSA-2048 PSS sign",
+   395.91286500012757
+  ],
+  [
+   "RSA-2048 PSS verify",
+   28.92874550002489
+  ],
+  [
+   "RSA-2048 OAEP encrypt",
+   27.063158000032672
+  ],
+  [
+   "RSA-2048 OAEP decrypt",
+   386.42992000063714
+  ],
+  [
+   "RSA-2048 key generation",
+   44822.354200005066
+  ]
+ ],
+ "bulk_mib_s": [
+  [
+   "SHA-256",
+   1277.709679843549
+  ],
+  [
+   "AES-256-GCM encrypt (single call)",
+   1762.003053883651
+  ],
+  [
+   "Record encrypt, 256 KiB chunks + Merkle CID",
+   624.4090066328686
+  ],
+  [
+   "Record decrypt, 256 KiB chunks",
+   765.8918856479086
+  ],
+  [
+   "Merkle CID check over ciphertext",
+   1160.263582874253
+  ]
+ ]
+}

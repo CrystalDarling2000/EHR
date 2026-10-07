@@ -1,0 +1,1 @@
+wrote 4 epochs, path lengths [0, 4, 7, 10]

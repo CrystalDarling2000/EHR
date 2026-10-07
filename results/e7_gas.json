@@ -1,0 +1,49 @@
+{
+ "solc": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+ "evm": "cancun",
+ "bytecode_bytes": 2666,
+ "deploy_gas": 616805,
+ "anchor_full": [
+  118298,
+  104293,
+  104293,
+  104281
+ ],
+ "anchor_compact": [
+  71277,
+  37372,
+  37372,
+  37360
+ ],
+ "verify": [
+  {
+   "blocks_in_epoch": 1,
+   "path_len": 0,
+   "gas": 25593,
+   "valid_proof_accepted": true,
+   "forged_proof_accepted": false
+  },
+  {
+   "blocks_in_epoch": 16,
+   "path_len": 4,
+   "gas": 30799,
+   "valid_proof_accepted": true,
+   "forged_proof_accepted": false
+  },
+  {
+   "blocks_in_epoch": 128,
+   "path_len": 7,
+   "gas": 34713,
+   "valid_proof_accepted": true,
+   "forged_proof_accepted": false
+  },
+  {
+   "blocks_in_epoch": 1024,
+   "path_len": 10,
+   "gas": 38611,
+   "valid_proof_accepted": true,
+   "forged_proof_accepted": false
+  }
+ ],
+ "gap_rejected": true
+}

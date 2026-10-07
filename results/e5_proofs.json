@@ -1,0 +1,175 @@
+{
+ "proofs": [
+  {
+   "blocks_per_epoch": 1,
+   "tx_per_block": 16,
+   "tx_in_epoch": 16,
+   "hashes": 4,
+   "proof_bytes": 288,
+   "gen_ms": 0.04704000002675457,
+   "verify_us": 6.957499863347039
+  },
+  {
+   "blocks_per_epoch": 1,
+   "tx_per_block": 64,
+   "tx_in_epoch": 64,
+   "hashes": 6,
+   "proof_bytes": 352,
+   "gen_ms": 0.11273800009803381,
+   "verify_us": 8.123499810608337
+  },
+  {
+   "blocks_per_epoch": 1,
+   "tx_per_block": 256,
+   "tx_in_epoch": 256,
+   "hashes": 8,
+   "proof_bytes": 416,
+   "gen_ms": 0.3272699996159645,
+   "verify_us": 9.287500006394112
+  },
+  {
+   "blocks_per_epoch": 1,
+   "tx_per_block": 1024,
+   "tx_in_epoch": 1024,
+   "hashes": 10,
+   "proof_bytes": 480,
+   "gen_ms": 1.2471009999899252,
+   "verify_us": 10.68750020749576
+  },
+  {
+   "blocks_per_epoch": 1,
+   "tx_per_block": 4096,
+   "tx_in_epoch": 4096,
+   "hashes": 12,
+   "proof_bytes": 544,
+   "gen_ms": 4.7746370000822935,
+   "verify_us": 11.58550026048033
+  },
+  {
+   "blocks_per_epoch": 16,
+   "tx_per_block": 16,
+   "tx_in_epoch": 256,
+   "hashes": 8,
+   "proof_bytes": 416,
+   "gen_ms": 0.08037499992497033,
+   "verify_us": 9.207499942931463
+  },
+  {
+   "blocks_per_epoch": 16,
+   "tx_per_block": 64,
+   "tx_in_epoch": 1024,
+   "hashes": 10,
+   "proof_bytes": 480,
+   "gen_ms": 0.21419799986688304,
+   "verify_us": 10.229000054096105
+  },
+  {
+   "blocks_per_epoch": 16,
+   "tx_per_block": 256,
+   "tx_in_epoch": 4096,
+   "hashes": 12,
+   "proof_bytes": 544,
+   "gen_ms": 0.3658020000329998,
+   "verify_us": 11.256500101808342
+  },
+  {
+   "blocks_per_epoch": 16,
+   "tx_per_block": 1024,
+   "tx_in_epoch": 16384,
+   "hashes": 14,
+   "proof_bytes": 608,
+   "gen_ms": 2.1051089997854433,
+   "verify_us": 12.259999948582845
+  },
+  {
+   "blocks_per_epoch": 16,
+   "tx_per_block": 4096,
+   "tx_in_epoch": 65536,
+   "hashes": 16,
+   "proof_bytes": 672,
+   "gen_ms": 4.934437999963848,
+   "verify_us": 13.596499911727733
+  },
+  {
+   "blocks_per_epoch": 128,
+   "tx_per_block": 16,
+   "tx_in_epoch": 2048,
+   "hashes": 11,
+   "proof_bytes": 512,
+   "gen_ms": 0.470893000056094,
+   "verify_us": 10.63899981090799
+  },
+  {
+   "blocks_per_epoch": 128,
+   "tx_per_block": 64,
+   "tx_in_epoch": 8192,
+   "hashes": 13,
+   "proof_bytes": 576,
+   "gen_ms": 0.519464999797492,
+   "verify_us": 11.888999779330334
+  },
+  {
+   "blocks_per_epoch": 128,
+   "tx_per_block": 256,
+   "tx_in_epoch": 32768,
+   "hashes": 15,
+   "proof_bytes": 640,
+   "gen_ms": 0.725943999896117,
+   "verify_us": 12.745999811158981
+  },
+  {
+   "blocks_per_epoch": 128,
+   "tx_per_block": 1024,
+   "tx_in_epoch": 131072,
+   "hashes": 17,
+   "proof_bytes": 704,
+   "gen_ms": 1.6145380000125442,
+   "verify_us": 14.042000202607596
+  },
+  {
+   "blocks_per_epoch": 1024,
+   "tx_per_block": 16,
+   "tx_in_epoch": 16384,
+   "hashes": 14,
+   "proof_bytes": 608,
+   "gen_ms": 3.1577120003021264,
+   "verify_us": 12.154999922131537
+  },
+  {
+   "blocks_per_epoch": 1024,
+   "tx_per_block": 64,
+   "tx_in_epoch": 65536,
+   "hashes": 16,
+   "proof_bytes": 672,
+   "gen_ms": 3.331635999984428,
+   "verify_us": 13.466499922287767
+  }
+ ],
+ "footprint": [
+  {
+   "rtype": "vitals",
+   "record_bytes": 2048,
+   "private_tx_bytes": 572
+  },
+  {
+   "rtype": "lab-report",
+   "record_bytes": 65536,
+   "private_tx_bytes": 581
+  },
+  {
+   "rtype": "xray-image",
+   "record_bytes": 8388608,
+   "private_tx_bytes": 584
+  },
+  {
+   "rtype": "ct-series",
+   "record_bytes": 50331648,
+   "private_tx_bytes": 584
+  },
+  {
+   "rtype": "CONSENT_GRANT tx",
+   "record_bytes": 0,
+   "private_tx_bytes": 546
+  }
+ ]
+}
